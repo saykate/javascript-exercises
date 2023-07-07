@@ -19,13 +19,11 @@ const sum = function(arr) {
   
 };
 
-const multiply = function(...args) {
-  console.log('NUMS', nums)
-  let product = nums.reduce((total, current) => {
+const multiply = function(...nums) {
+  let product = nums.reduce((total, current) => { 
     return total * current
-  }, 1); console.log(typeof product)
+  }, 1); return product
 };
-//something is wonky...
 
 const power = function(x, y) {
   let num = 1;
