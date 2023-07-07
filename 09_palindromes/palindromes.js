@@ -1,10 +1,12 @@
 const palindromes = function (string) {
-    let strippedStr = string.replaceAll('/\s\W/g', '');
-    console.log(strippedStr);
-let newStr = [...string.toLowerCase()];
-console.log('Original', newStr);
-let reverseStr = newStr.reverse();
-console.log('Reverse', reverseStr);
+    let strippedStr = string.toLowerCase().replaceAll(/\W/g, '');
+    let strippedArr = [...strippedStr];
+    let reverseStr = strippedArr.reverse().join('');
+    console.log('arr', strippedArr)
+    console.log('stripped', strippedStr);
+    console.log('rev', reverseStr);
+
+      return strippedStr === reverseStr
 };
 
 // Do not edit below this line
